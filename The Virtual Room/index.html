@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Virtual Room - 3D Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="cube-loader">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face left"></div>
+                <div class="face right"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+            <p>Loading Virtual Room...</p>
+        </div>
+    </div>
+
+    <div id="instructions">
+        <h1>🎮 The Virtual Room</h1>
+        <div class="controls">
+            <div class="control-group">
+                <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>
+                <span>or</span>
+                <span class="key">↑</span><span class="key">←</span><span class="key">↓</span><span class="key">→</span>
+            </div>
+            <p>Move the cube around the room</p>
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <span class="key mouse">🖱️ Drag</span>
+            </div>
+            <p>Rotate camera view</p>
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <span class="key">Space</span>
+            </div>
+            <p>Toggle cube glow effect</p>
+        </div>
+        <button id="close-instructions">Start Exploring</button>
+    </div>
+
+    <div id="info">
+        <span>Press <kbd>H</kbd> for help</span>
+    </div>
+
+    <canvas id="scene"></canvas>
+
+    <!-- Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
